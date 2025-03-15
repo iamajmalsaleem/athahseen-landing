@@ -8,7 +8,7 @@ import Contact from './pages/Contact';
 
 function App() {
   return (
-    <Router>
+    <Router basename="/athahseen-landing">
       <div className="min-h-screen bg-white">
         <Layout>
           <Routes>
