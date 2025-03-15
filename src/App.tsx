@@ -6,27 +6,27 @@ import React from 'react';
 const Home = () => (
   <>
     {/* Hero Section */}
-    <section className="pt-24 pb-16 px-4 bg-cover bg-center" style={{ backgroundImage: "url('https://images.unsplash.com/photo-1579187707643-35646d22b596?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80')" }}>
-      <div className="container mx-auto max-w-6xl bg-white bg-opacity-75 p-8 rounded-lg">
-        <div className="grid md:grid-cols-2 gap-12 items-center">
+    <section className="pt-20 md:pt-24 pb-12 md:pb-16 px-4 bg-cover bg-center" style={{ backgroundImage: "url('https://images.unsplash.com/photo-1579187707643-35646d22b596?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80')" }}>
+      <div className="container mx-auto max-w-6xl bg-white bg-opacity-75 p-4 md:p-8 rounded-lg">
+        <div className="grid md:grid-cols-2 gap-8 md:gap-12 items-center">
           <div>
-            <h1 className="text-5xl font-bold text-gray-900 leading-tight mb-6">
+            <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 leading-tight mb-4 md:mb-6">
               Learn Quran Online with Expert Teachers
             </h1>
-            <p className="text-xl text-gray-600 mb-8">
+            <p className="text-lg md:text-xl text-gray-600 mb-6 md:mb-8">
               Connect with qualified Quran teachers for personalized one-on-one lessons from the comfort of your home.
             </p>
-            <div className="flex space-x-4">
-              <button className="bg-emerald-600 text-white px-8 py-3 rounded-full hover:bg-emerald-700 transition flex items-center">
-                Get Started <ChevronRight className="ml-2" />
+            <div className="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
+              <button className="bg-emerald-600 text-white px-6 py-3 text-sm md:text-base rounded-full hover:bg-emerald-700 transition flex items-center justify-center">
+                Get Started <ChevronRight className="ml-2 h-4 w-4 md:h-5 md:w-5" />
               </button>
               <a 
                 href="https://athahseen.com/brochure"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="border-2 border-gray-300 text-gray-700 px-8 py-3 rounded-full hover:border-emerald-600 hover:text-emerald-600 transition flex items-center"
+                className="border-2 border-gray-300 text-gray-700 px-6 py-3 text-sm md:text-base rounded-full hover:border-emerald-600 hover:text-emerald-600 transition flex items-center justify-center"
               >
-                Brochure <PlayCircle className="ml-2" />
+                Brochure <PlayCircle className="ml-2 h-4 w-4 md:h-5 md:w-5" />
               </a>
             </div>
           </div>
@@ -49,21 +49,21 @@ const Home = () => (
             <div className="flex justify-center mb-4">
               <Users className="h-10 w-10 text-emerald-600" />
             </div>
-            <h3 className="text-4xl font-bold text-gray-900 mb-2">10K+</h3>
+            <h3 className="text-3xl md:text-4xl font-bold text-gray-900 mb-2">10K+</h3>
             <p className="text-gray-600">Active Students</p>
           </div>
           <div className="text-center">
             <div className="flex justify-center mb-4">
               <BookOpen className="h-10 w-10 text-emerald-600" />
             </div>
-            <h3 className="text-4xl font-bold text-gray-900 mb-2">50+</h3>
+            <h3 className="text-3xl md:text-4xl font-bold text-gray-900 mb-2">50+</h3>
             <p className="text-gray-600">Certified Teachers</p>
           </div>
           <div className="text-center">
             <div className="flex justify-center mb-4">
               <GraduationCap className="h-10 w-10 text-emerald-600" />
             </div>
-            <h3 className="text-4xl font-bold text-gray-900 mb-2">5K+</h3>
+            <h3 className="text-3xl md:text-4xl font-bold text-gray-900 mb-2">5K+</h3>
             <p className="text-gray-600">Graduates</p>
           </div>
         </div>
@@ -74,8 +74,8 @@ const Home = () => (
     <section className="bg-gray-50 py-16 px-4">
       <div className="container mx-auto max-w-6xl">
         <div className="text-center mb-12">
-          <h2 className="text-3xl font-bold text-gray-900 mb-4">Why Choose Athahseen?</h2>
-          <p className="text-xl text-gray-600">We provide the best online Quran learning experience</p>
+          <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-3 md:mb-4">Why Choose Athahseen?</h2>
+          <p className="text-lg md:text-xl text-gray-600">We provide the best online Quran learning experience</p>
         </div>
         <div className="grid md:grid-cols-3 gap-8">
           {[
@@ -92,7 +92,7 @@ const Home = () => (
               description: "Custom curriculum tailored to your learning pace and goals"
             }
           ].map((feature, index) => (
-            <div key={index} className="bg-white p-8 rounded-xl shadow-lg">
+            <div key={index} className="bg-white p-4 md:p-8 rounded-xl shadow-lg">
               <div className="flex items-center mb-4">
                 <CheckCircle2 className="h-8 w-8 text-emerald-600" />
               </div>
@@ -108,8 +108,8 @@ const Home = () => (
     <section className="py-16 px-4 bg-white">
       <div className="container mx-auto max-w-6xl">
         <div className="text-center mb-12">
-          <h2 className="text-3xl font-bold text-gray-900 mb-4">Featured Courses</h2>
-          <p className="text-xl text-gray-600">Start your journey with our most popular programs</p>
+          <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-3 md:mb-4">Featured Courses</h2>
+          <p className="text-lg md:text-xl text-gray-600">Start your journey with our most popular programs</p>
         </div>
         <div className="grid md:grid-cols-3 gap-8">
           {[
@@ -156,8 +156,8 @@ const Home = () => (
     <section className="py-16 px-4 bg-gray-50">
       <div className="container mx-auto max-w-6xl">
         <div className="text-center mb-12">
-          <h2 className="text-3xl font-bold text-gray-900 mb-4">Student Success Stories</h2>
-          <p className="text-xl text-gray-600">Hear from our students about their learning journey</p>
+          <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-3 md:mb-4">Student Success Stories</h2>
+          <p className="text-lg md:text-xl text-gray-600">Hear from our students about their learning journey</p>
         </div>
         <div className="grid md:grid-cols-2 gap-8">
           {[
@@ -203,8 +203,8 @@ const Home = () => (
     <section className="py-16 px-4 bg-white">
       <div className="container mx-auto max-w-6xl">
         <div className="text-center mb-12">
-          <h2 className="text-3xl font-bold text-gray-900 mb-4">What Our Students Say</h2>
-          <p className="text-xl text-gray-600">Reviews from our global community</p>
+          <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-3 md:mb-4">What Our Students Say</h2>
+          <p className="text-lg md:text-xl text-gray-600">Reviews from our global community</p>
         </div>
         <div className="grid md:grid-cols-3 gap-8">
           {[
@@ -586,13 +586,13 @@ function App() {
     return (
       <nav className="fixed w-full bg-white shadow-sm z-50">
         <div className="container mx-auto px-4 py-2 flex items-center justify-between">
-          <Link to="/" className="flex items-center space-x-3">
-            <img src="/AthahseenLogo.png" alt="Athahseen Logo" className="h-16 w-auto object-contain" />
-            <span className="text-2xl md:text-2xl font-bold text-gray-800 text-base">Athahseen Quran Academy</span>
+          <Link to="/" className="flex items-center space-x-2">
+            <img src="/AthahseenLogo.png" alt="Athahseen Logo" className="h-12 w-auto md:h-16 object-contain" />
+            <span className="text-lg md:text-2xl font-bold text-gray-800 ">Athahseen Quran Academy</span>
           </Link>
           
           {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center space-x-8">
+          <div className="hidden md:flex items-center space-x-4 lg:space-x-8">
             <Link to="/courses" className={getNavItemClass('courses')}>
               Courses
             </Link>
@@ -602,7 +602,7 @@ function App() {
             <Link to="/contact" className={getNavItemClass('contact')}>
               Contact
             </Link>
-            <button className="bg-emerald-600 text-white px-6 py-2 rounded-full hover:bg-emerald-700 transition">
+            <button className="bg-emerald-600 text-white px-4 py-2 lg:px-6 lg:py-2 text-sm lg:text-base rounded-full hover:bg-emerald-700 transition">
               Start Learning
             </button>
           </div>
@@ -627,17 +627,17 @@ function App() {
         {/* Mobile Navigation Dropdown */}
         {isMenuOpen && (
           <div className="md:hidden bg-white border-t">
-            <Link to="/courses" className={getMobileNavItemClass('courses')} onClick={() => setIsMenuOpen(false)}>
+            <Link to="/courses" className={getMobileNavItemClass('courses') + ' text-lg'} onClick={() => setIsMenuOpen(false)}>
               Courses
             </Link>
-            <Link to="/about" className={getMobileNavItemClass('about')} onClick={() => setIsMenuOpen(false)}>
+            <Link to="/about" className={getMobileNavItemClass('about') + ' text-lg'} onClick={() => setIsMenuOpen(false)}>
               About
             </Link>
-            <Link to="/contact" className={getMobileNavItemClass('contact')} onClick={() => setIsMenuOpen(false)}>
+            <Link to="/contact" className={getMobileNavItemClass('contact') + ' text-lg'} onClick={() => setIsMenuOpen(false)}>
               Contact
             </Link>
             <div className="p-4">
-              <button className="w-full bg-emerald-600 text-white px-6 py-2 rounded-full hover:bg-emerald-700 transition">
+              <button className="w-full bg-emerald-600 text-white px-6 py-3 text-lg rounded-full hover:bg-emerald-700 transition">
                 Start Learning
               </button>
             </div>
