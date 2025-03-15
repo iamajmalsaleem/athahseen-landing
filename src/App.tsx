@@ -18,11 +18,16 @@ const Home = () => (
             </p>
             <div className="flex space-x-4">
               <button className="bg-emerald-600 text-white px-8 py-3 rounded-full hover:bg-emerald-700 transition flex items-center">
-                Book Free Trial <ChevronRight className="ml-2" />
+                Get Started <ChevronRight className="ml-2" />
               </button>
-              <button className="border-2 border-gray-300 text-gray-700 px-8 py-3 rounded-full hover:border-emerald-600 hover:text-emerald-600 transition flex items-center">
-                Watch Demo <PlayCircle className="ml-2" />
-              </button>
+              <a 
+                href="https://athahseen.com/brochure"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="border-2 border-gray-300 text-gray-700 px-8 py-3 rounded-full hover:border-emerald-600 hover:text-emerald-600 transition flex items-center"
+              >
+                Brochure <PlayCircle className="ml-2" />
+              </a>
             </div>
           </div>
           <div className="relative">
@@ -137,12 +142,12 @@ const Home = () => (
           ))}
         </div>
         <div className="text-center mt-8">
-          <button 
-            onClick={() => setCurrentPage('courses')}
+          <Link 
+            to="/courses"
             className="bg-emerald-600 text-white px-8 py-3 rounded-full hover:bg-emerald-700 transition inline-flex items-center"
           >
             View All Courses <ChevronRight className="ml-2" />
-          </button>
+          </Link>
         </div>
       </div>
     </section>
@@ -565,6 +570,12 @@ function App() {
     const location = useLocation();
     const currentPage = location.pathname.substring(1) || 'home';
 
+    const getNavItemClass = (page: string) => {
+      return `relative py-2 text-gray-600 hover:text-emerald-600 transition-colors ${
+        currentPage === page ? 'text-emerald-600 font-medium after:absolute after:bottom-0 after:left-0 after:right-0 after:h-0.5 after:bg-emerald-600' : ''
+      }`;
+    };
+
     return (
       <nav className="fixed w-full bg-white shadow-sm z-50">
         <div className="container mx-auto px-4 py-2 flex items-center justify-between">
@@ -573,22 +584,13 @@ function App() {
             <span className="text-2xl font-bold text-gray-800">Athahseen Academy</span>
           </Link>
           <div className="hidden md:flex items-center space-x-8">
-            <Link 
-              to="/courses"
-              className={`text-gray-600 hover:text-emerald-600 ${currentPage === 'courses' ? 'text-emerald-600' : ''}`}
-            >
+            <Link to="/courses" className={getNavItemClass('courses')}>
               Courses
             </Link>
-            <Link 
-              to="/about"
-              className={`text-gray-600 hover:text-emerald-600 ${currentPage === 'about' ? 'text-emerald-600' : ''}`}
-            >
+            <Link to="/about" className={getNavItemClass('about')}>
               About
             </Link>
-            <Link 
-              to="/contact"
-              className={`text-gray-600 hover:text-emerald-600 ${currentPage === 'contact' ? 'text-emerald-600' : ''}`}
-            >
+            <Link to="/contact" className={getNavItemClass('contact')}>
               Contact
             </Link>
             <button className="bg-emerald-600 text-white px-6 py-2 rounded-full hover:bg-emerald-700 transition">
