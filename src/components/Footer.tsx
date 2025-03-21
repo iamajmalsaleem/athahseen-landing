@@ -8,7 +8,7 @@ const Footer = () => {
         <div className="grid md:grid-cols-3 gap-8">
           <div>
             <div className="flex items-center space-x-2 mb-6">
-              <img src="/AthahseenLogo.png" alt="Athahseen Logo" className="h-8 w-8 object-contain" />
+              <img src="/athahseen-landing/AthahseenLogo.png" alt="Athahseen Logo" className="h-8 w-8 object-contain" />
               <span className="text-2xl font-bold">Athahseen</span>
             </div>
             <p className="text-gray-400">Empowering Muslims worldwide with quality Quran education online.</p>

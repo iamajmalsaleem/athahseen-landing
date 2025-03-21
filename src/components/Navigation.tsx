@@ -22,7 +22,7 @@ const Navigation = () => {
     <nav className="fixed w-full bg-white shadow-sm z-50">
       <div className="container mx-auto px-4 py-2 flex items-center justify-between">
         <Link to="/" className="flex items-center space-x-2">
-          <img src="/AthahseenLogo.png" alt="Athahseen Logo" className="h-12 w-auto md:h-16 object-contain" />
+          <img src="/athahseen-landing/AthahseenLogo.png" alt="Athahseen Logo" className="h-12 w-auto md:h-16 object-contain" />
           <span className="text-lg md:text-2xl font-bold text-gray-800">Athahseen Quran Academy</span>
         </Link>
         
